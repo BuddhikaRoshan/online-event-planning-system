@@ -1,0 +1,177 @@
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                min-height: 100vh;
+                width: 100%;
+                background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+                    url('image/pexels-sebastian-ervi-1763075.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: relative;
+                font-family: 'Roboto', sans-serif;
+                color: white;
+                transition: background-image 3s ease;
+                /* Add a smooth transition to background changes */
+            }
+
+            .navbar {
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: auto;
+                padding: 20px 0;
+            }
+
+            .navbar img {
+                width: 100px;
+                cursor: pointer;
+                margin-right: 15px;
+            }
+
+            .text-box {
+                width: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .text-box h1 {
+                font-size: 3rem;
+            }
+
+            .text-box p {
+                margin: 20px 0 40px;
+                font-size: 1.2rem;
+            }
+
+            .visit-btn {
+                display: inline-block;
+                text-decoration: none;
+                color: white;
+                border: 2px solid white;
+                padding: 12px 34px;
+                font-size: 1rem;
+                background: transparent;
+                cursor: pointer;
+            }
+
+            section {
+                margin-top: 30%;
+            }
+
+            .icon a {
+                color: white;
+                margin: 0 15px;
+                cursor: pointer;
+            }
+
+            h6 {
+                font-size: 1rem;
+            }
+
+            .background-transition {
+                transition: box-shadow 0.5s;
+            }
+
+            /* Add a CSS animation for smooth background image transitions */
+            @keyframes backgroundAnimation {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        </style>
+
+       <script>
+    const images = [
+        'image/groom-putting-ring-bride-s-finger.jpg',
+        'image/family-reunion-celebrating-winter.jpg',
+        'image/medium-shot-friends-with-birthday-cake.jpg',
+        'image/pexels-sebastian-ervi-1763075.jpg'
+    ];
+    let currentIndex = 0;
+
+    function changeBackgroundImage() {
+        document.body.style.backgroundImage = `linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('${images[currentIndex]}')`;
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    // Use the CSS animation to smoothly fade in the background image
+    function startSlideshow() {
+        setInterval(() => {
+            changeBackgroundImage();
+            document.body.style.animation = 'none';
+            setTimeout(() => {
+                document.body.style.animation = 'backgroundAnimation 3s';
+            }, 100);
+        }, 3000);
+    }
+
+    // Start the slideshow when the page loads
+    window.onload = startSlideshow;
+</script>
+
+
+        <title>Home</title>
+    </head>
+
+    <body>
+        <header class="header background-transition">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="image/pic1-removebg-preview.png" alt="Logo">
+                </div>
+
+                <div class="text-box">
+                    <h1>Seamless Event Planning<br>at Your Fingertips.</h1>
+
+                    <p>Welcome to our Event Management Hub! Discover a seamless and convenient way to plan
+                        your next event with us. Whether you're organizing a corporate conference or a personal
+                        celebration, our user-friendly platform allows you to create, coordinate, and manage
+                        events with ease. Explore a wide range of event types and find the perfect solutions
+                        to suit your needs and budget. With our streamlined planning process and competitive prices,
+                        you can save time and resources while ensuring a successful event. Get ready to embark on
+                        your next event planning journey and let us take care of the details. Start your event
+                        today and elevate your gatherings to new heights with our event management services.
+                    </p>
+
+                    <a href="LoginView.jsp" class="visit-btn">Click here to get started</a>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="icon" align="center">
+                <a><i class="fab fa-facebook"></i></a>
+                <a><i class="fab fa-youtube"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-instagram"></i></a>
+                <br>
+                <br>
+                <h6>Rubik Event (SE_OOP_2023_S2_MLB_WD_G335_Online Event Planning System) © 2023 - All Rights Reserved
+                </h6>
+            </div>
+        </section>
+    </body>
+
+    </html>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+    id="WebApp_ID" version="6.0">
+    <display-name>EventPlaningSystem</display-name>
+
+    <welcome-file-list>
+        <welcome-file>home.html</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.controllers.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignupServlet</servlet-name>
+        <servlet-class>com.controllers.SignupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignupServlet</servlet-name>
+        <url-pattern>/SignupServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReservationServlet</servlet-name>
+        <servlet-class>com.controllers.ReservationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReservationServlet</servlet-name>
+        <url-pattern>/reservation</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>EventServlet</servlet-name>
+        <servlet-class>com.controllers.EventServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EventServlet</servlet-name>
+        <url-pattern>/event</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>PackageServlet</servlet-name>
+        <servlet-class>com.controllers.PackageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PackageServlet</servlet-name>
+        <url-pattern>/package</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserProfileServlet</servlet-name>
+        <servlet-class>com.controllers.UserProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserProfileServlet</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+    
+<servlet>
+    <servlet-name>PaymentServelet</servlet-name>
+    <servlet-class>com.controllers.PaymentServelet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    <servlet-name>PaymentServelet</servlet-name>
+    <url-pattern>/PaymentServelet</url-pattern>
+    </servlet-mapping>
+
+<servlet>
+    <servlet-name>UpdatePaymentServelet</servlet-name>
+    <servlet-class>com.controllers.UpdatePaymentServelet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UpdatePaymentServelet</servlet-name>
+    <url-pattern>/UpdatePaymentServelet</url-pattern>
+</servlet-mapping>
+
+</web-app>
